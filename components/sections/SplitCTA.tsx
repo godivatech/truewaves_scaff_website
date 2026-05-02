@@ -28,12 +28,12 @@ export function SplitCTA() {
         layout
       >
         {/* Background Image */}
-        <div className="absolute inset-0 z-0 opacity-30 transition-transform duration-700 group-hover:scale-105">
+        <div className="absolute inset-0 z-0 opacity-80 transition-transform duration-700 group-hover:scale-105">
           <Image src="/images/section%20images/Rental.png" alt="Rental" fill className="object-cover" />
-          <div className="absolute inset-0 bg-[var(--surface-0)]/80 backdrop-blur-[2px]" />
+          <div className="absolute inset-0 bg-[var(--surface-0)]/30 backdrop-blur-[1px]" />
         </div>
 
-        <div className="max-w-md relative z-10">
+        <div className="max-w-md relative z-10 bg-white/60 backdrop-blur-xl p-8 md:p-10 rounded-[2.5rem] shadow-2xl border border-white/40">
           <div className="w-20 h-20 mx-auto rounded-2xl bg-[var(--success)]/20 flex items-center justify-center mb-6 backdrop-blur-md">
             <Building className="w-10 h-10 text-[var(--success)]" />
           </div>
@@ -66,12 +66,12 @@ export function SplitCTA() {
         layout
       >
         {/* Background Image */}
-        <div className="absolute inset-0 z-0 opacity-30 transition-transform duration-700 group-hover:scale-105">
+        <div className="absolute inset-0 z-0 opacity-80 transition-transform duration-700 group-hover:scale-105">
           <Image src="/images/section%20images/Material%20Supply.png" alt="Material Supply" fill className="object-cover" />
-          <div className="absolute inset-0 bg-[var(--surface-0)]/80 backdrop-blur-[2px]" />
+          <div className="absolute inset-0 bg-[var(--surface-0)]/30 backdrop-blur-[1px]" />
         </div>
 
-        <div className="max-w-md relative z-10">
+        <div className="max-w-md relative z-10 bg-white/60 backdrop-blur-xl p-8 md:p-10 rounded-[2.5rem] shadow-2xl border border-white/40">
           <div className="w-20 h-20 mx-auto rounded-2xl bg-[var(--primary-500)]/20 flex items-center justify-center mb-6 backdrop-blur-md">
             <Package className="w-10 h-10 text-[var(--primary-500)]" />
           </div>

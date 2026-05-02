@@ -31,7 +31,7 @@ const services = [
   {
     title: "Site Support",
     desc: "We don’t just deliver — we support you on-site to ensure everything runs smoothly and safely.",
-    highlight: "24/7 technical and site assistance",
+    highlight: "Rapid response technical and site assistance",
     image: "/images/section%20images/Site%20Support.png",
     icon: Truck,
   },
