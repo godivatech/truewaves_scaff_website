@@ -68,7 +68,7 @@ export function Hero() {
                   className="absolute bottom-4 left-0 h-[12px] bg-[var(--primary-500)]/30 -z-10"
                 />
               </span> <br />
-              IN SCAFFOLDING
+              IN SCAFFOLDING & FORMWORK
             </motion.h1>
           </div>
 

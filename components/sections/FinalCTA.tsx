@@ -3,12 +3,24 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
 import { Phone, MessageCircle } from "lucide-react";
+import Image from "next/image";
 
 export function FinalCTA() {
   return (
-    <section className="py-24 relative overflow-hidden bg-[var(--surface-0)] border-t border-[var(--surface-4)]">
+    <section className="py-24 relative overflow-hidden bg-black border-t border-[var(--surface-4)]">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image 
+          src="/images/section%20images/flatbed_scaffolding_truck.png" 
+          alt="Scaffolding Delivery" 
+          fill 
+          className="object-cover opacity-30" 
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-black" />
+      </div>
+
       {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl h-96 bg-[var(--primary-500)]/20 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl h-96 bg-[var(--primary-500)]/20 rounded-full blur-[100px] pointer-events-none z-0" />
 
       <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
         <motion.div

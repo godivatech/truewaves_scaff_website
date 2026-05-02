@@ -47,14 +47,14 @@ export function About() {
             className="relative"
           >
             <div className="aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden glass-dark p-2 border-[var(--surface-4)]">
-              <div className="w-full h-full rounded-2xl bg-gradient-to-tr from-[var(--surface-1)] to-[var(--primary-500)]/20 relative flex items-center justify-center">
-                {/* Fallback image/placeholder since we don't have construction images */}
-                <div className="text-center p-8">
-                  <div className="w-24 h-24 mx-auto mb-6 opacity-50 relative">
-                     <Image src="/images/Logo.png" alt="True Waves Scaff" fill className="object-contain" />
-                  </div>
-                  <p className="text-[var(--text-muted)] font-heading font-medium tracking-widest uppercase">Premium Quality</p>
-                </div>
+              <div className="w-full h-full relative flex items-center justify-center rounded-2xl overflow-hidden">
+                <Image 
+                  src="/images/section%20images/construction%20workers.png" 
+                  alt="True Waves Scaffolding Team" 
+                  fill 
+                  className="object-cover" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-tr from-[var(--surface-0)] via-transparent to-[var(--primary-500)]/20 mix-blend-overlay"></div>
               </div>
             </div>
             
