@@ -99,7 +99,6 @@ export function Services() {
               </motion.div>
             </AnimatePresence>
           </div>
-
           {/* Right Side: Interactive List */}
           <div className="lg:col-span-7 flex flex-col gap-4 md:gap-6">
             {services.map((service, index) => {

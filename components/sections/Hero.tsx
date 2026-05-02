@@ -36,7 +36,7 @@ export function Hero() {
       <div className="absolute top-[20%] left-10 w-[1px] h-[40%] bg-gradient-to-b from-[var(--primary-400)] to-transparent opacity-60 hidden md:block" />
       
       <div className="container relative z-20 mx-auto px-4 md:px-6">
-        <div className="max-w-4xl backdrop-blur-[2px] py-8 rounded-3xl">
+        <div className="max-w-5xl lg:max-w-6xl backdrop-blur-[2px] py-8 rounded-3xl">
           {/* Tagline */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -76,11 +76,11 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-12 items-end"
+            className="grid grid-cols-1 xl:grid-cols-[1fr_auto] gap-8 xl:gap-24 items-end"
           >
-            <div className="bg-black/20 backdrop-blur-md p-6 md:p-0 md:bg-transparent md:backdrop-blur-none rounded-2xl">
-              <p className="text-lg md:text-xl text-white font-medium mb-10 leading-relaxed drop-shadow-lg">
-                From small projects to large developments, we provide safe, reliable, and easy-to-manage scaffolding and material solutions — so you can focus on building, not worrying.
+            <div className="bg-black/20 backdrop-blur-md p-6 xl:p-0 xl:bg-transparent xl:backdrop-blur-none rounded-2xl">
+              <p className="text-lg md:text-xl text-white font-medium mb-10 leading-relaxed drop-shadow-lg max-w-3xl">
+                From small projects to large developments, we provide safe, reliable, and easy-to-manage scaffolding and material solutions so you can focus on building, not worrying.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
