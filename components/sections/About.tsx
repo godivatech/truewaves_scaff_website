@@ -15,7 +15,7 @@ export function About() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="font-heading text-3xl md:text-5xl font-bold text-[var(--foreground)] mb-6 leading-tight">
-              We Don't Just Supply — <br />
+              We Don't Just Supply <br />
               <span className="text-[var(--primary-500)]">We Support Your Build</span>
             </h2>
             <div className="space-y-6 text-lg text-[var(--text-muted)] leading-relaxed">
