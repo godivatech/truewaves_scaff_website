@@ -58,8 +58,8 @@
   --color-success: var(--success);
   --color-success-hover: var(--success-hover);
 
-  --font-sans: var(--font-inter);
-  --font-heading: var(--font-poppins);
+  --font-sans: var(--font-manrope);
+  --font-heading: var(--font-space-grotesk);
 }
 
 body {

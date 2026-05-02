@@ -43,11 +43,16 @@ export function Footer() {
           </div>
         </div>
         
-        <div className="border-t border-[var(--surface-4)] pt-8 flex flex-col md:flex-row items-center justify-between text-sm text-[var(--text-muted)]">
+        <div className="border-t border-[var(--surface-4)] pt-8 flex flex-col lg:flex-row items-center justify-between text-sm text-[var(--text-muted)] gap-4">
           <p>© {new Date().getFullYear()} True Waves Scaff. All rights reserved.</p>
-          <div className="flex gap-4 mt-4 md:mt-0">
-            <Link href="#" className="hover:text-[var(--text-muted)]">Privacy Policy</Link>
-            <Link href="#" className="hover:text-[var(--text-muted)]">Terms of Service</Link>
+          
+          <p className="text-center">
+            Designed and developed by <a href="https://www.godivatech.com" target="_blank" rel="noopener noreferrer" className="font-semibold text-[var(--primary-500)] hover:text-[var(--primary-600)] transition-colors">Godiva Tech</a>
+          </p>
+
+          <div className="flex gap-4">
+            <Link href="#" className="hover:text-[var(--foreground)] transition-colors">Privacy Policy</Link>
+            <Link href="#" className="hover:text-[var(--foreground)] transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>
