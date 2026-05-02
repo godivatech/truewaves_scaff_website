@@ -10,8 +10,12 @@ export function SplitCTA() {
   const [hovered, setHovered] = useState<"left" | "right" | null>(null);
 
   return (
-    <section className="relative h-[80vh] min-h-[600px] w-full flex flex-col md:flex-row overflow-hidden bg-[var(--surface-0)]">
-      {/* Left Side: Rental */}
+    <section className="relative min-h-[80vh] w-full flex flex-col overflow-hidden bg-[var(--surface-0)] py-12">
+      <div className="text-center mb-12 relative z-20">
+        <h2 className="font-heading text-3xl md:text-5xl font-bold text-[var(--foreground)]">What Do You Need Today?</h2>
+      </div>
+      <div className="flex flex-col md:flex-row flex-1">
+        {/* Left Side: Rental */}
       <motion.div 
         className={cn(
           "relative flex-1 flex flex-col justify-center items-center text-center p-8 transition-all duration-500 z-10",
@@ -75,6 +79,7 @@ export function SplitCTA() {
           </Button>
         </div>
       </motion.div>
+      </div>
     </section>
   );
 }

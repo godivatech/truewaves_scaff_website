@@ -21,8 +21,8 @@ export function FinalCTA() {
           <h2 className="font-heading text-4xl md:text-6xl font-bold text-[var(--foreground)] mb-6">
             Let’s Make Your Project <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#008FD4] to-[#38BDF8]">Easier</span>
           </h2>
-          <p className="text-xl text-[var(--text-muted)] mb-10">
-            Fast Response. Fair Pricing. Reliable Support.
+          <p className="text-xl text-[var(--text-muted)] mb-10 leading-relaxed">
+            Whether you need scaffolding on rent or materials for purchase, we’re here to help you move forward without delays.
           </p>
 
           <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4">
@@ -41,8 +41,8 @@ export function FinalCTA() {
           </div>
           
           <div className="mt-16 pt-8 border-t border-[var(--surface-4)]">
-            <p className="text-[var(--text-muted)]">
-              "Need urgent scaffolding or materials? Chat with us directly."
+            <p className="text-2xl font-heading font-bold text-[var(--foreground)] tracking-wide">
+              "Fast Response. Fair Pricing. Reliable Support."
             </p>
           </div>
         </motion.div>

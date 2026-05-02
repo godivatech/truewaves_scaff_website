@@ -7,22 +7,26 @@ import { Building2, HardHat, Package, Truck } from "lucide-react";
 const services = [
   {
     title: "Scaffolding Rental",
-    desc: "Flexible rental plans for all types of scaffolding systems. Quick delivery and ready-to-use materials.",
+    desc: "Need scaffolding for your site? We’ve got you covered with strong, safe, and ready-to-use systems — delivered when you need them.",
+    highlight: "👉 Perfect for: Builders, contractors, site engineers",
     icon: Building2,
   },
   {
     title: "Formwork Solutions",
-    desc: "Comprehensive formwork systems designed for efficiency, safety, and superior concrete finishes.",
+    desc: "We provide shuttering systems that help you build faster, cleaner, and with better finish quality.",
+    highlight: "👉 Ideal for: Columns, slabs, beams, and full structures",
     icon: HardHat,
   },
   {
     title: "Material Trading & Supply",
-    desc: "Bulk supply of construction materials with competitive pricing and reliable quality.",
+    desc: "Looking for reliable materials? We supply quality-tested scaffolding components in bulk or as per your requirement.",
+    highlight: "👉 Includes: Pipes, planks, couplers & accessories",
     icon: Package,
   },
   {
     title: "Site Support",
-    desc: "On-site support and consultation to ensure safe erection and dismantling of scaffolding.",
+    desc: "We don’t just deliver — we support you on-site to ensure everything runs smoothly and safely.",
+    highlight: "",
     icon: Truck,
   },
 ];
@@ -65,9 +69,16 @@ export function Services() {
                   <CardTitle className="text-xl text-[var(--foreground)]">{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-[var(--text-muted)] leading-relaxed pl-16">
-                    {service.desc}
-                  </p>
+                  <div className="pl-16 space-y-3">
+                    <p className="text-[var(--text-muted)] leading-relaxed">
+                      {service.desc}
+                    </p>
+                    {service.highlight && (
+                      <p className="text-sm font-semibold text-[var(--primary-500)]">
+                        {service.highlight}
+                      </p>
+                    )}
+                  </div>
                 </CardContent>
               </Card>
             </motion.div>

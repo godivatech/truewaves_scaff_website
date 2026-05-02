@@ -20,10 +20,10 @@ export function About() {
             </h2>
             <div className="space-y-6 text-lg text-[var(--text-muted)] leading-relaxed">
               <p>
-                True Waves Scaff is a leading provider of premium scaffolding and formwork solutions in Madurai and across Tamil Nadu. We understand that strong foundations are built on reliable support.
+                At True Waves Scaff, we understand that every construction project comes with deadlines, pressure, and responsibility. That’s why we focus on making scaffolding and material supply simple, reliable, and stress-free.
               </p>
               <p>
-                Our mission is to ensure every construction site operates safely and efficiently. Whether you need to rent scaffolding for a short-term project or require bulk material supply for a large-scale development, we deliver with speed and uncompromised quality.
+                Whether you need short-term rental or bulk material supply, our team ensures you get what you need, when you need it — without complications.
               </p>
             </div>
             

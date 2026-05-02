@@ -25,7 +25,7 @@ export function Leadership() {
           />
         </div>
 
-        <div className="max-w-md mx-auto">
+        <div className="max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -44,10 +44,18 @@ export function Leadership() {
                   <h3 className="font-heading text-2xl font-bold text-[var(--foreground)] mb-1 group-hover:text-[var(--primary-400)] transition-colors">
                     J. Swarnalatha
                   </h3>
-                  <p className="text-[var(--primary-500)] font-medium tracking-wider text-sm mb-4">DIRECTOR</p>
-                  <p className="text-[var(--text-muted)] leading-relaxed text-sm">
-                    Guiding True Waves Scaff with a commitment to excellence, safety, and unwavering support for the construction industry in Tamil Nadu.
-                  </p>
+                  <p className="text-[var(--primary-500)] font-medium tracking-wider text-sm mb-6 uppercase">Director – True Waves Scaff</p>
+                  <div className="text-[var(--text-muted)] leading-relaxed text-[15px] space-y-4 text-left">
+                    <p>
+                      J. Swarnalatha is a dynamic leader shaping the growth of True Waves Scaff with a strong focus on safety, reliability, and execution excellence.
+                    </p>
+                    <p>
+                      With deep expertise in scaffolding rental and material trading, she ensures every project is delivered with precision, timely coordination, and dependable systems. Her leadership is rooted in discipline, attention to detail, and a commitment to consistent performance.
+                    </p>
+                    <p>
+                      She believes that true success lies in building strong foundations — not just in structures, but in client relationships, trust, and long-term value.
+                    </p>
+                  </div>
                 </div>
               </CardContent>
             </Card>

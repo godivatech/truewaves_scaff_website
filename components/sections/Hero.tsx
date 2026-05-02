@@ -1,65 +1,127 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/Button";
-import dynamic from "next/dynamic";
-
-// Dynamically import the 3D scene to prevent SSR issues and reduce initial load time
-const HeroScene = dynamic(() => import("@/components/HeroScene").then(mod => mod.HeroScene), { 
-  ssr: false,
-  loading: () => <div className="absolute inset-0 bg-transparent" />
-});
+import Image from "next/image";
+import { useRef } from "react";
 
 export function Hero() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollY } = useScroll();
+  const y1 = useTransform(scrollY, [0, 500], [0, 200]);
+  const opacity = useTransform(scrollY, [0, 300], [1, 0]);
+
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-      {/* 3D Background */}
-      <HeroScene />
+    <section 
+      ref={containerRef}
+      className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-black"
+    >
+      {/* Background Image with Parallax */}
+      <motion.div 
+        style={{ y: y1 }}
+        className="absolute inset-0 z-0 opacity-100"
+      >
+        {/* Overall black overlay for total readability */}
+        <div className="absolute inset-0 bg-black/70 z-10" />
+        <Image 
+          src="/images/section%20images/hero%20section.png" 
+          alt="True Waves Scaffolding" 
+          fill 
+          className="object-cover object-center transition-all duration-1000"
+          priority
+        />
+      </motion.div>
+
+      {/* Decorative Elements */}
+      <div className="absolute top-[20%] left-10 w-[1px] h-[40%] bg-gradient-to-b from-[var(--primary-400)] to-transparent opacity-60 hidden md:block" />
       
-      {/* Content overlay */}
-      <div className="container relative z-10 mx-auto px-4 md:px-6">
-        <div className="max-w-3xl">
+      <div className="container relative z-20 mx-auto px-4 md:px-6">
+        <div className="max-w-4xl backdrop-blur-[2px] py-8 rounded-3xl">
+          {/* Tagline */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="flex items-center gap-3 mb-8"
           >
-            <h1 className="font-heading text-5xl md:text-7xl font-bold tracking-tight text-[var(--foreground)] mb-6 leading-tight">
-              Your Trusted Partner in <br className="hidden md:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#008FD4] to-[#38BDF8]">
-                Scaffolding & Formwork
-              </span>
-            </h1>
+            <span className="h-[1px] w-12 bg-[var(--primary-400)]" />
+            <span className="text-xs md:text-sm font-black tracking-[0.4em] uppercase text-[var(--primary-300)] drop-shadow-md">
+              ESTABLISHED 2024
+            </span>
           </motion.div>
-          
+
+          {/* Main Headline */}
+          <div className="relative">
+            <motion.h1 
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              className="font-heading text-5xl md:text-[6rem] font-bold tracking-tight text-white leading-[1] mb-8 drop-shadow-2xl"
+            >
+              YOUR TRUSTED <br />
+              <span className="text-[var(--primary-400)] relative inline-block">
+                PARTNER
+                <motion.span 
+                  initial={{ width: 0 }}
+                  animate={{ width: "100%" }}
+                  transition={{ delay: 0.8, duration: 1 }}
+                  className="absolute bottom-4 left-0 h-[12px] bg-[var(--primary-500)]/30 -z-10"
+                />
+              </span> <br />
+              IN SCAFFOLDING
+            </motion.h1>
+          </div>
+
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-12 items-end"
           >
-            <p className="text-lg md:text-xl text-[var(--text-muted)] mb-10 max-w-2xl leading-relaxed">
-              From small projects to large developments, we provide safe, reliable, and easy-to-manage scaffolding and material solutions — so you can focus on building, not worrying.
-            </p>
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4"
-          >
-            <Button size="lg" variant="success" className="text-base font-semibold">
-              Apply for Scaffolding Rental
-            </Button>
-            <Button size="lg" variant="default" className="text-base font-semibold">
-              Request Material Supply
-            </Button>
+            <div className="bg-black/20 backdrop-blur-md p-6 md:p-0 md:bg-transparent md:backdrop-blur-none rounded-2xl">
+              <p className="text-lg md:text-xl text-white font-medium mb-10 leading-relaxed drop-shadow-lg">
+                From small projects to large developments, we provide safe, reliable, and easy-to-manage scaffolding and material solutions — so you can focus on building, not worrying.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button size="lg" variant="success" className="rounded-full px-8 h-14 text-sm md:text-base font-black shadow-2xl shadow-[var(--primary-500)]/60 hover:scale-105 transition-transform uppercase tracking-wider">
+                  Apply for Scaffolding Rental
+                </Button>
+                <Button size="lg" variant="default" className="rounded-full px-8 h-14 text-sm md:text-base font-black border-2 border-white/40 text-white hover:bg-white hover:text-black transition-all uppercase tracking-wider bg-transparent">
+                  Request Material Supply
+                </Button>
+              </div>
+            </div>
+
+            <div className="hidden md:flex flex-col gap-8 border-l-2 border-[var(--primary-500)]/30 pl-12 pb-2">
+              <div className="space-y-1">
+                <span className="block text-5xl font-black text-white drop-shadow-lg">100%</span>
+                <span className="block text-xs uppercase tracking-[0.3em] text-[var(--primary-200)] font-black">Safety Record</span>
+              </div>
+              <div className="space-y-1">
+                <span className="block text-5xl font-black text-white drop-shadow-lg">24/7</span>
+                <span className="block text-xs uppercase tracking-[0.3em] text-[var(--primary-200)] font-black">Support Ready</span>
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>
-      
-      {/* Gradient overlay to ensure text readability */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[var(--surface-1)] via-[var(--surface-0)]/80 to-transparent pointer-events-none" />
+
+      {/* Scroll Indicator */}
+      <motion.div 
+        style={{ opacity }}
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4"
+      >
+        <span className="text-[10px] uppercase tracking-[0.4em] font-bold text-slate-500">SCROLL</span>
+        <div className="h-12 w-[1px] bg-gradient-to-b from-[var(--primary-500)] to-transparent" />
+      </motion.div>
+
+      {/* Side Label */}
+      <div className="absolute right-10 bottom-[20%] rotate-90 origin-right hidden xl:block">
+        <span className="text-xs uppercase tracking-[0.8em] font-bold text-white/30">
+          TRUE WAVES GROUP • SCAFFOLDING & FORMWORK
+        </span>
+      </div>
     </section>
   );
 }

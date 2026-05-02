@@ -146,7 +146,7 @@ export function QuoteForm() {
 
                     <div className="pt-4 flex justify-center">
                       <Button type="submit" size="lg" disabled={isSubmitting} className="w-full md:w-auto min-w-[200px]">
-                        {isSubmitting ? "Sending..." : "Submit Request"}
+                        {isSubmitting ? "Sending..." : "Get My Quote"}
                       </Button>
                     </div>
                   </form>
