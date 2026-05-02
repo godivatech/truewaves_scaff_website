@@ -93,13 +93,13 @@ export function Hero() {
               </div>
             </div>
 
-            <div className="hidden md:flex flex-col gap-8 border-l-2 border-[var(--primary-500)]/30 pl-12 pb-2">
+            <div className="hidden md:flex flex-row xl:flex-col gap-12 xl:gap-8 border-t-2 xl:border-t-0 xl:border-l-2 border-[var(--primary-500)]/30 pt-8 xl:pt-0 xl:pl-12 pb-2">
               <div className="space-y-1">
-                <span className="block text-5xl font-black text-white drop-shadow-lg">100%</span>
+                <span className="block text-4xl xl:text-5xl font-black text-white drop-shadow-lg">100%</span>
                 <span className="block text-xs uppercase tracking-[0.3em] text-[var(--primary-200)] font-black">Safety Record</span>
               </div>
               <div className="space-y-1">
-                <span className="block text-5xl font-black text-white drop-shadow-lg">24/7</span>
+                <span className="block text-4xl xl:text-5xl font-black text-white drop-shadow-lg">24/7</span>
                 <span className="block text-xs uppercase tracking-[0.3em] text-[var(--primary-200)] font-black">Support Ready</span>
               </div>
             </div>
