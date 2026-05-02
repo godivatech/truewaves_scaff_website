@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+:root {
+  /* Surface Elevation System (Light Theme) */
+  --surface-0: #F8FAFC; /* Deepest background (Off-white/Slate-50) */
+  --surface-1: #FFFFFF; /* Base background (Pure White) */
+  --surface-2: #F1F5F9; /* Cards and slight elevations (Slate-100) */
+  --surface-3: #E2E8F0; /* Hover states, higher elevations (Slate-200) */
+  --surface-4: #CBD5E1; /* Borders and dividers (Slate-300) */
+
+  /* Text & Foreground */
+  --foreground: #0F172A; /* Deep Dark for readable text */
+  --text-muted: #64748B; /* Muted text */
+
+  /* Primary Brand Scale (Derived from #008FD4) */
+  --primary-50: #E5F4FB;
+  --primary-100: #CCE9F7;
+  --primary-200: #99D3EE;
+  --primary-300: #66BDE5;
+  --primary-400: #33A7DC;
+  --primary-500: #008FD4; /* Logo Exact */
+  --primary-600: #0072AA; /* Accessible Button Default */
+  --primary-700: #005680; /* Button Hover */
+  --primary-800: #003955;
+  --primary-900: #001D2B;
+  --primary-950: #000E15;
+
+  /* Success/Action (Green) */
+  --success: #16A34A;
+  --success-hover: #15803D;
+}
+
+@theme inline {
+  --color-background: var(--surface-0);
+  --color-foreground: var(--foreground);
+  
+  /* Map custom variables to Tailwind */
+  --color-surface-0: var(--surface-0);
+  --color-surface-1: var(--surface-1);
+  --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
+  --color-surface-4: var(--surface-4);
+
+  --color-text-muted: var(--text-muted);
+
+  --color-primary-50: var(--primary-50);
+  --color-primary-100: var(--primary-100);
+  --color-primary-200: var(--primary-200);
+  --color-primary-300: var(--primary-300);
+  --color-primary-400: var(--primary-400);
+  --color-primary-500: var(--primary-500);
+  --color-primary-600: var(--primary-600);
+  --color-primary-700: var(--primary-700);
+  --color-primary-800: var(--primary-800);
+  --color-primary-900: var(--primary-900);
+  --color-primary-950: var(--primary-950);
+
+  --color-success: var(--success);
+  --color-success-hover: var(--success-hover);
+
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-poppins);
+}
+
+body {
+  background: var(--surface-0);
+  color: var(--foreground);
+}
+
+/* 
+  Glassmorphism is now used strictly for floating UI (like the Header) 
+  and not overused on standard cards.
+*/
+@utility glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--surface-4);
+}
+
+/* Custom scrollbar matched to the new system */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--surface-0);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--surface-4);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-500);
+}
