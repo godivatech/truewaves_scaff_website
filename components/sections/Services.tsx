@@ -38,8 +38,8 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="py-24 bg-[var(--surface-1)] relative z-10">
-      <div className="container mx-auto px-4 md:px-6">
+    <section id="services" className="py-24 bg-[var(--surface-1)] relative z-10 overflow-hidden">
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
