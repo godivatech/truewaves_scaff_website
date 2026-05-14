@@ -93,8 +93,9 @@ export function Footer() {
                 <div>
                   <span className="block text-white text-sm font-medium mb-1">Our Location</span>
                   <p className="text-sm text-white/60 leading-relaxed">
-                    True Waves Scaffolding,<br />
-                    Madurai, Tamil Nadu
+                    Madurai Office<br />
+                    No. 5, North Street, Singarayar Colony,<br />
+                    Narimedu, Madurai - 625002
                   </p>
                 </div>
               </li>
