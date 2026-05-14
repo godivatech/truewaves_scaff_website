@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/Button";
 import { Building, Package } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import Link from "next/link";
 
 export function SplitCTA() {
   const [hovered, setHovered] = useState<"left" | "right" | null>(null);
@@ -49,9 +50,11 @@ export function SplitCTA() {
               <span className="w-1.5 h-1.5 rounded-full bg-[var(--success)]" /> Ready-to-use systems
             </li>
           </ul>
-          <Button variant="success" size="lg" className="w-full sm:w-auto shadow-lg shadow-[var(--success)]/20">
-            Apply for Rental
-          </Button>
+          <Link href="/contact">
+            <Button variant="success" size="lg" className="w-full sm:w-auto shadow-lg shadow-[var(--success)]/20">
+              Apply for Rental
+            </Button>
+          </Link>
         </div>
       </motion.div>
 
@@ -87,9 +90,11 @@ export function SplitCTA() {
               <span className="w-1.5 h-1.5 rounded-full bg-[var(--primary-500)]" /> Reliable quality
             </li>
           </ul>
-          <Button variant="default" size="lg" className="w-full sm:w-auto">
-            Request Materials
-          </Button>
+          <Link href="/contact">
+            <Button variant="default" size="lg" className="w-full sm:w-auto">
+              Request Materials
+            </Button>
+          </Link>
         </div>
       </motion.div>
       </div>

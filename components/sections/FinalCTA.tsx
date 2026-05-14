@@ -49,17 +49,11 @@ export function FinalCTA() {
             Whether you need scaffolding on rent or materials for purchase, we’re here to help you move forward without delays.
           </p>
 
-          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4">
-            <Button size="lg" variant="success" className="text-base">
-              Apply for Rental
-            </Button>
-            <Button size="lg" variant="default" className="text-base">
-              Request Materials
-            </Button>
-            <Button size="lg" variant="outline" className="text-base gap-2 bg-transparent text-white border-white/30 hover:bg-white hover:text-black transition-colors">
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Button size="lg" variant="outline" className="text-base gap-2 bg-transparent text-white border-white/30 hover:bg-white hover:text-black transition-colors min-w-[200px]">
               <Phone className="w-5 h-5" /> Call Now
             </Button>
-            <Button size="lg" variant="secondary" className="text-base gap-2 bg-[#25D366] hover:bg-[#1da851] text-white border-transparent shadow-lg shadow-[#25D366]/20 transition-colors">
+            <Button size="lg" variant="secondary" className="text-base gap-2 bg-[#25D366] hover:bg-[#1da851] text-white border-transparent shadow-lg shadow-[#25D366]/20 transition-colors min-w-[200px]">
               <WhatsAppIcon className="w-5 h-5" /> WhatsApp Us
             </Button>
           </div>
