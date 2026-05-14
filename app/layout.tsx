@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
-import { Manrope, Space_Grotesk } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import { LenisProvider } from "@/components/LenisProvider";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
-const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
-const spaceGrotesk = Space_Grotesk({
-  weight: ["400", "500", "600", "700"],
+const poppins = Poppins({
+  weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
-  variable: "--font-space-grotesk",
+  variable: "--font-poppins",
 });
 
 export const metadata: Metadata = {
@@ -37,7 +36,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${manrope.variable} ${spaceGrotesk.variable} font-sans antialiased bg-[var(--surface-0)]`} suppressHydrationWarning>
+      <body className={`${poppins.variable} font-sans antialiased bg-[var(--surface-0)]`} suppressHydrationWarning>
         <LenisProvider>
           <div className="flex flex-col min-h-screen">
             <Header />

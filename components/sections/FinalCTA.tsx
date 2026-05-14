@@ -42,7 +42,7 @@ export function FinalCTA() {
           transition={{ duration: 0.8 }}
           className="max-w-3xl mx-auto"
         >
-          <h2 className="font-heading text-4xl md:text-6xl font-bold text-white mb-6">
+          <h2 className="font-heading text-[clamp(1rem,5.5vw,3.75rem)] font-bold text-white mb-6 whitespace-nowrap tracking-tighter">
             Let’s Make Your Project <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#008FD4] to-[#38BDF8]">Easier</span>
           </h2>
           <p className="text-xl text-gray-300 mb-10 leading-relaxed">
