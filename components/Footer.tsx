@@ -30,7 +30,7 @@ export function Footer() {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="lg:col-span-1">
-            <div className="relative w-[240px] h-[60px] mb-8 brightness-0 invert opacity-90">
+            <div className="relative w-[260px] h-[65px] md:w-[320px] md:h-[80px] mb-8 brightness-0 invert opacity-90">
               <Image 
                 src="/images/Logo.png" 
                 alt="True Waves Scaff" 

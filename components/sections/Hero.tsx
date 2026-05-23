@@ -14,7 +14,7 @@ export function Hero() {
   return (
     <section 
       ref={containerRef}
-      className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-black"
+      className="relative min-h-screen flex items-center pt-20 md:pt-24 overflow-hidden bg-black"
     >
       {/* Background Image with Parallax */}
       <motion.div 
